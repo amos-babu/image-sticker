@@ -1,12 +1,11 @@
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import React from "react";
 import { Pressable, StyleSheet, View } from "react-native";
 
 type Props = {
   onPress: () => void;
 };
 
-const CircleButton = ({ onPress }: Props) => {
+export default function CircleButton({ onPress }: Props) {
   return (
     <View style={styles.circleButtonContainer}>
       <Pressable style={styles.circleButton} onPress={onPress}>
@@ -14,9 +13,7 @@ const CircleButton = ({ onPress }: Props) => {
       </Pressable>
     </View>
   );
-};
-
-export default CircleButton;
+}
 
 const styles = StyleSheet.create({
   circleButtonContainer: {
